@@ -30,11 +30,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val btnMoveWithDataActivity: Button = findViewById(R.id.btn_move_activity_data)
         val btnMoveWithObject:Button = findViewById(R.id.btn_move_activity_object)
         val btnDialPhone:Button = findViewById(R.id.btn_dial_number)
+        val btnFragmentActivity: Button = findViewById(R.id.btn_fragment_activity)
 
         btnMoveActivity.setOnClickListener(this)
         btnMoveWithDataActivity.setOnClickListener(this)
         btnMoveWithObject.setOnClickListener(this)
         btnDialPhone.setOnClickListener(this)
+        btnFragmentActivity.setOnClickListener(this)
 
         val btnMoveForResult:Button = findViewById(R.id.btn_move_for_result)
         btnMoveForResult.setOnClickListener(this)
@@ -76,6 +78,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_move_for_result -> {
                 val moveForResultIntent = Intent(this@MainActivity, MoveForResultActivity::class.java)
                 resultLauncher.launch(moveForResultIntent)
+            }
+
+            R.id.btn_fragment_activity -> {
+                val fragmentActivity = Intent(this@MainActivity, FragmentActivity::class.java)
+                startActivity(fragmentActivity)
             }
         }
     }

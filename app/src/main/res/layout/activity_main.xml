@@ -7,6 +7,12 @@
     android:padding="16dp">
 
     <Button
+        android:id="@+id/btn_fragment_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/fragment_activity" />
+    <Button
         android:id="@+id/btn_move_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
