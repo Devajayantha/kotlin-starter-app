@@ -31,12 +31,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val btnMoveWithObject:Button = findViewById(R.id.btn_move_activity_object)
         val btnDialPhone:Button = findViewById(R.id.btn_dial_number)
         val btnFragmentActivity: Button = findViewById(R.id.btn_fragment_activity)
+        val btnScrollViewActivity: Button = findViewById(R.id.btn_scroll_view)
 
         btnMoveActivity.setOnClickListener(this)
         btnMoveWithDataActivity.setOnClickListener(this)
         btnMoveWithObject.setOnClickListener(this)
         btnDialPhone.setOnClickListener(this)
         btnFragmentActivity.setOnClickListener(this)
+        btnScrollViewActivity.setOnClickListener(this)
 
         val btnMoveForResult:Button = findViewById(R.id.btn_move_for_result)
         btnMoveForResult.setOnClickListener(this)
@@ -73,6 +75,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val phoneNumber = "081210841382"
                 val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
                 startActivity(dialPhoneIntent)
+            }
+
+            R.id.btn_scroll_view -> {
+                val scrollViewActivity = Intent(this@MainActivity, ScrollViewActivity::class.java)
+                startActivity(scrollViewActivity)
             }
 
             R.id.btn_move_for_result -> {
