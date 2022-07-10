@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val btnDialPhone:Button = findViewById(R.id.btn_dial_number)
         val btnFragmentActivity: Button = findViewById(R.id.btn_fragment_activity)
         val btnScrollViewActivity: Button = findViewById(R.id.btn_scroll_view)
+        val btnRecyclerView: Button = findViewById(R.id.btn_recycler_view)
 
         btnMoveActivity.setOnClickListener(this)
         btnMoveWithDataActivity.setOnClickListener(this)
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnDialPhone.setOnClickListener(this)
         btnFragmentActivity.setOnClickListener(this)
         btnScrollViewActivity.setOnClickListener(this)
+        btnRecyclerView.setOnClickListener(this)
 
         val btnMoveForResult:Button = findViewById(R.id.btn_move_for_result)
         btnMoveForResult.setOnClickListener(this)
@@ -90,6 +92,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_fragment_activity -> {
                 val fragmentActivity = Intent(this@MainActivity, FragmentActivity::class.java)
                 startActivity(fragmentActivity)
+            }
+
+            R.id.btn_recycler_view -> {
+                val recyclerViewActivity = Intent(this@MainActivity, RecycleViewActivity::class.java)
+                startActivity(recyclerViewActivity)
             }
         }
     }
